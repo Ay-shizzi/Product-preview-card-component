@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@200;500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 500px;
+}
+.left{
+    background-image: url(images/image-product-desktop.jpg);
+    background-repeat: none;
+    background-size: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.right{
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.right h3{
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px 0;
+    letter-spacing: 4px;
+    color: hsl(228, 12%, 48%);
+}
+.right h1{
+    font-family: Fraunces;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.right p{
+    font-size: 12px;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 20px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.right h2{
+    display: inline-block;
+    font-family: Fraunces;
+    font-size: 28px;
+    color: hsl(158, 36%, 37%);
+}
+.right h4{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+button{
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(158, 91%, 13%);
+}
+button img{
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 300px;
+    }
+   .left{
+    background-image: url(images/image-product-mobile.jpg);
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 200px;
+   }
+   .right{
+    border-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+   }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="content">
+        <div class="left">
+        </div>
+        <div class="right">
+            <h3>PERFUME</h3>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p>
+              A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+              Perfumer-Creator for the House of CHANEL.
+            </p>
+            <div class="price">
+                <h2>$149.99</h2>
+                <h4>$169.99</h4>
+            </div>
+            <button><img src="images/icon-cart.svg" alt=""> Add to Cart</button>
+        </div>
+    </div>
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Lawal Abdullahi (Ay-shizzi)</a>.
+  </div>
+</body>
+</html>
